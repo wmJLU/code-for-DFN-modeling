@@ -1,0 +1,10 @@
+%%此程序用于验证迹长
+X=linspace(0,8,81);%%生成0到8之间有81个数据的等差数列
+x=X';
+mu1=0.643581;
+sigma1=0.735888;
+y1=lognpdf(x,mu1,sigma1);%%现场迹长散点
+mu2=0.702099;
+sigma2=0.734124;
+y2=lognpdf(x,mu2,sigma2);%%模拟迹长散点
+xlswrite('验证迹长.xlsx',[x,y1,y2])
